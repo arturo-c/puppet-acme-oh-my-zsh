@@ -30,7 +30,7 @@ define ohmyzsh::install() {
   vcsrepo { "${home}/.oh-my-zsh":
     ensure    => present,
     provider  => git,
-    source    => "git://github.com/robbyrussell/oh-my-zsh.git",
+    source    => "https://github.com/robbyrussell/oh-my-zsh.git",
     user      => $title,
     require   => [User[$title], Package['zsh']]
   }
